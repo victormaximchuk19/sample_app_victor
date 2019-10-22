@@ -42,9 +42,9 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   config.action_mailer.raise_delivery_errors = true 
-  config.action_mailer.default_url_options = { host: ‘sampleappvictor.herokuapp.com’ } 
+  config.action_mailer.default_url_options = { host:'sampleappvictor.herokuapp.com' } 
   config.action_mailer.perform_deliveries = true 
-  ActionMailer::Base.smtp_settings = { :address => ‘smtp.sendgrid.net’, :port => ‘587’, :authentication => :plain, :user_name => ENV[‘SENDGRID_USERNAME’], :password => ENV[‘SENDGRID_PASSWORD’], :domain => ‘heroku.com’ } 
+  ActionMailer::Base.smtp_settings = { :address => 'smtp.sendgrid.net', :port => '587', :authentication => :plain, :user_name => ENV['SENDGRID_USERNAME'], :password => ENV['SENDGRID_PASSWORD'], :domain => 'heroku.com' } 
   ActionMailer::Base.delivery_method = :smtp
   
   # Mount Action Cable outside main process or domain
